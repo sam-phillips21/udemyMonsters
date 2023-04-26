@@ -41,7 +41,8 @@ class App extends Component {
     console.log('Render')
 
     const { monsters, searchField } = this.state;
-    const { onSearchChange } =this;
+    const { onSearchChange } = this;
+
     const filteredMonsters = monsters.filter((monster)=> { 
       return monster.name.toLocaleLowerCase().includes(searchField);
             
@@ -49,7 +50,9 @@ class App extends Component {
 
     return (
       <div className="App">
-        <input className='search-box' type= 'search' placeholder='search monsters' 
+        <input className='search-box' 
+        type= 'search' 
+        placeholder='search monsters' 
         onChange={onSearchChange} 
         />
          {filteredMonsters.map((monster) => {
