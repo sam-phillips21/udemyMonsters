@@ -1,6 +1,6 @@
 import { Component } from 'react';
 // https://jsonplaceholder.typicode.com/users
-import logo from './logo.svg';
+import CardList from './components/card-list/card-list.component';
 import './App.css';
 
 class App extends Component {
@@ -55,14 +55,14 @@ class App extends Component {
         placeholder='search monsters' 
         onChange={onSearchChange} 
         />
-         {filteredMonsters.map((monster) => {
+         {/* {filteredMonsters.map((monster) => {
             return(
               <div key= {monster.id}>
                 <h1>{monster.name}</h1>
              </div>
             );
-          })}
-
+          })} */}
+        <CardList />
       </div>
     );
   }
